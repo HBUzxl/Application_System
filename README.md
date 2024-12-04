@@ -1,6 +1,4 @@
-# 1usercenter
-
-## Project setup
+# Project setup
 ```
 npm install
 ```
