@@ -1,4 +1,6 @@
-# Project setup
+# Application System
+
+## Project setup
 ```
 npm install
 ```
