@@ -2,7 +2,7 @@
     <div class="sidebar">
       <div class="logo">
         <img src="@/assets/logo.png" alt="Logo" class="logo-img">
-        <span class="logo-text">会诊平台</span>
+        <span class="logo-text">病例申请平台</span>
       </div>
       <el-menu
         :default-active="activeMenu"

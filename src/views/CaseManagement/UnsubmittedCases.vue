@@ -82,6 +82,24 @@
           printCount: 2
         },
         // 可以添加更多示例数据
+        {
+          pathologyNo: 'P2023002',
+          name: '李四',
+          gender: '男',
+          age: 45,
+          pathologyType: '常规',
+          expert: '王医生',
+          printCount: 0
+        },
+        {
+          pathologyNo: 'P2023003',
+          name: '张芳',
+          gender: '女',
+          age: 32,
+          pathologyType: '常规',
+          expert: '张医生',
+          printCount: 1
+        },
       ])
   
       // 搜索过滤
