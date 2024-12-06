@@ -11,8 +11,15 @@
         </span>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>个人信息</el-dropdown-item>
-            <el-dropdown-item divided>退出登录</el-dropdown-item>
+            <el-dropdown-item @click="$router.push('/change-password')">
+              <el-icon><User /></el-icon>
+              个人信息
+            </el-dropdown-item>
+
+            <el-dropdown-item divided>
+              <el-icon><SwitchButton /></el-icon>
+              退出登录
+            </el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
@@ -23,9 +30,14 @@
 <script>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { User, SwitchButton } from '@element-plus/icons-vue'
 
 export default {
   name: 'Header',
+  components: {
+    User,
+    SwitchButton
+  },
   setup() {
     const route = useRoute()
     const currentTitle = computed(() => route.meta.title || '用户中心')

@@ -9,6 +9,7 @@ import WithdrawnCases from '@/views/CaseManagement/WithdrawnCases.vue';
 import FrozenAppointment from '@/views/FrozenAppointment/FrozenAppointment.vue';
 import UploadProgress from '@/views/UploadManagement/UploadProgress.vue';
 import ConsultationStatistics from '@/views/StatisticsReport/ConsultationStatistics.vue';
+import ChangePassword from '@/views/UserProfile/ChangePassword.vue';
 
 const routes = [
     {
@@ -69,6 +70,12 @@ const routes = [
         name: 'consultation-statistics',
         component: ConsultationStatistics,
         meta: { title: '会诊统计' }
+    },
+    {
+        path: '/change-password',
+        name: 'change-password',
+        component: ChangePassword,
+        meta: { title: '修改密码' }
     }
 ];
 
