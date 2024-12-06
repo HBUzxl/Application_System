@@ -6,8 +6,12 @@
     <div class="header-right">
       <el-dropdown>
         <span class="user-info">
-          <el-avatar :size="32" />
-          <span class="username">管理员</span>
+          <el-avatar :size="32" class="custom-avatar">
+            <el-icon><UserFilled /></el-icon>
+          </el-avatar>
+          <span class="username" >
+            管理员
+          </span>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -30,11 +34,12 @@
 <script>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { User, SwitchButton } from '@element-plus/icons-vue'
+import { User, SwitchButton, UserFilled } from '@element-plus/icons-vue'
 
 export default {
   name: 'Header',
   components: {
+    UserFilled, 
     User,
     SwitchButton
   },
@@ -75,5 +80,17 @@ export default {
   margin-left: 8px;
   font-size: 14px;
   color: #606266;
+}
+
+.custom-avatar {
+  background-color: #409EFF !important;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-avatar :deep(.el-icon) {
+  font-size: 18px;
 }
 </style>
