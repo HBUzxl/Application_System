@@ -8,3 +8,11 @@ module.exports = defineConfig({
     }
   }
 })
+
+module.exports = {
+  devServer: {
+      client: {
+          overlay: false,
+      },
+  },
+};
