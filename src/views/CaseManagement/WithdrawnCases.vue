@@ -6,13 +6,13 @@
           <el-input
             v-model="searchQuery"
             placeholder="请输入搜索内容"
-            prefix-icon="el-icon-search"
             @input="handleSearch"
           >
+            <template #prefix>
+              <el-icon><Search /></el-icon>
+            </template>
             <template #append>
-              <el-button icon="el-icon-search" @click="handleSearch"
-                >搜索</el-button
-              >
+              <el-button @click="handleSearch">搜索</el-button>
             </template>
           </el-input>
         </div>
@@ -52,9 +52,13 @@
     
     <script>
   import { ref, computed } from "vue";
+  import { Search } from "@element-plus/icons-vue";
   
   export default {
-    name: "UnsubmittedCases",
+    name: "WithdrawnCases",
+    components: {
+      Search,
+    },
     setup() {
       const loading = ref(false);
       const searchQuery = ref("");
